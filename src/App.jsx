@@ -41,25 +41,30 @@ function App() {
             >
                 <div className="w-full mb-1">
                     <InputBox
+                    className='hover:transition-all  hover:border-black
+                        hover:bg-green-200 hover:delay-500 hover:ease-linear'
                         label="From"
                         amount={amount}
                         currencyOptions ={options}
-                        onCurrencyChange={(currency)=>setAmount(amount)}
+                        onCurrencyChange={(currency)=>setFrom(currency)}
                         selectCurrency = {from}
                         onAmountChange={(amount)=>setAmount(amount)}
                     />
                 </div>
                 <div className="relative w-full h-0.5">
-                    <button
+                    <button 
                         type="button"
-                        className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
+                        className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5 hover:transition-all  hover:border-black
+                        hover:bg-blue-800 hover:delay-300 hover:ease-linear"
                         onClick={swap}
                     >
                         swap
                     </button>
                 </div>
-                <div className="w-full mt-1 mb-4">
+                <div className="w-full mt-1 mb-4 ">
                     <InputBox
+                    className='hover:transition-all  hover:border-black
+                        hover:bg-amber-300 hover:delay-300 hover:ease-linear'
                         label="To"
                         amount={convertedAmount}
                         currencyOptions ={options}
@@ -71,7 +76,9 @@ function App() {
                         
                     />
                 </div>
-                <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
+                <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg border-2
+                 hover:transition-all  hover:border-black
+                        hover:bg-blue-800 hover:delay-300 hover:ease-linear">
                     Convert {from.toUpperCase()} to {to.toUpperCase()}
                 </button>
             </form>
